@@ -1,0 +1,11 @@
+@font-face {
+
+font-family:chalkdust;
+src:url(letras/chalkdust.ttf);
+
+}
+
+h2 {
+
+	font-family: chalkdust;
+}

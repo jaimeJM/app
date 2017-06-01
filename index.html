@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<link href="imagenes/logo.png" type="imagen/x-icon" rel="shortcut icon"/>
+		<title>Aprende con Jaimito </title>
+		<link rel="stylesheet" type="text/css" href="fuentes.css"/>
+		<link rel="stylesheet" type="text/css" href="estilo.css"/> 
+		<script src="https://code.jquery.com/jquery-1.7.2.min.js"></script>
+		<script src="http://gsgd.co.uk/sandbox/jquery/easing/jquery.easing.1.3.js"></script>
+		<script src ="script.js"> </script>
+
+		<script>
+function playpause(btn,vid){
+
+	var vid = document.getElementById(vid);
+if (vid.paused) {
+
+	vid.play();
+	btn.innerHTML = "sonido";
+	btn.src ="imagenes/sonido1.gif";
+
+if (vid.stop) {
+
+	vid.stop();
+	btn.innerHTML = "sonido";
+	btn.src ="imagenes/1.png";
+
+
+}
+
+}else {
+	vid.pause();
+	btn.innerHTML = "apagado";
+	btn.src ="imagenes/sonido2.png";
+	
+	}
+}
+	</script>
+
+	</head>
+
+	<body>
+			<nav id="main-nav" class ="main-nav">					
+				<ul class="menu">
+					<li class ="menu__item"><a class="menu__link">home</a></li>
+					<li class ="menu__item"><a class="menu__link">home1</a></li>
+					<li class ="menu__item"><a class="menu__link">home2</a></li>
+					<li class ="menu__item"><a class="menu__link">home3</a></li>
+				</ul>
+				<div class="menu-bar">
+					<div class="uno"></div>
+					<div class="dos"></div>
+					<div class="tres"></div>
+				</div>
+			</nav>
+
+				<div id="video_controls_bar">
+
+		<img id="playpausebtn" src ="imagenes/1.png" width="80" height="60" onclick="playpause(this,'my_video')" ></img>
+					</div>	
+			<h1> Aprende las Vocales</h1>
+	
+				<div class="parametros">
+					<h2 class="titulo">Toca las vocales</h2>
+					
+					<div class="vocales">
+				<!--<ul class="vocales1">
+					<a  class="Aa" title="toca el boton">a</a>
+					<a  class="Ee" title="toca el boton">e</a>
+					<a  class="Ii" title="toca el boton">i</a>
+					<a  class="Oo" title="toca el boton">o</a>
+					<a  class="Uu" title="toca el boton">u</a>
+				</ul>-->
+					<button class="Aa" title="toca el boton">a</button>
+						<button class="Ee">e</button>
+						<button class="Ii">i</button>
+						<button class="Oo">o</button>
+						<button class="Uu">u</button> 
+
+						<audio src="musicas/a.ogg" class="boton" preload></audio>
+						<audio src="musicas/e.ogg" class="boton" preload></audio>
+						<audio src="musicas/i.ogg" class="boton" preload></audio>
+						<audio src="musicas/o.ogg" class="boton" preload></audio>
+						<audio src="musicas/u.ogg" class="boton" preload></audio>
+						<audio src="musicas/repite.ogg" class="boton"></audio>
+						<audio src="musicas/aeiou.ogg" id="my_video" autoplay></audio>
+					</div>
+				</div>	
+		   	
+	</body>
+
+</html>
