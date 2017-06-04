@@ -234,9 +234,8 @@ h1 {
 
 .parametros {
 	width: 90%;
-	height: 1200px;
+	height: 1300px;
 	margin: 0 auto;
-	margin-bottom: 100px;
 	background: -webkit-linear-gradient(top, #38594B, #38594B); /* gris*/
 	border: 5px solid #F4AE4B;	
 	border-radius: 5px;
