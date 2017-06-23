@@ -458,13 +458,13 @@ z-index: -1;
 		cursor: pointer;
 }
 
-.niños {
+.ninos {
 		margin-top: 430px;
 		margin-left: 450px;
 		width: 10%;
 		height: 20%;
 		background-size: 100% 100%;
-		background-image: url("../Imagenes/niños.gif");
+		background-image: url("../Imagenes/ninos.gif");
 		position: absolute;
 }
 
@@ -734,7 +734,7 @@ nav ul li a{
 		height: 20%;
 	}
 
-.niños {
+.ninos {
 		margin-top: 250px;
 		margin-left: 225px;
 		width: 10%;
@@ -976,7 +976,7 @@ nav ul li a{
 		height: 5%;
 	}
 
-.niños {
+.ninos {
 		margin-top: 550px;
 		margin-left: 250px;
 		width: 10%;
