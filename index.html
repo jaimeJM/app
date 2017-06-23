@@ -1,79 +1,23 @@
 <!DOCTYPE html>
-<html lang="es">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
-		<title>Aprende con Jaimito </title>
-		<link href="imagenes/logo.png" type="imagen/x-icon" rel="shortcut icon"/>
-		<link rel="stylesheet" type="text/css" href="fuentes.css"/>
-		<link rel="stylesheet" type="text/css" href="estilo.css"/> 
-		<script src="js/jquery-3.2.1.js"></script>
-		<script src ="script.js"> </script>
-
-		
-		<script>
-function playpause(btn,vid){
-	var vid = document.getElementById(vid);
-if (vid.paused) {
-	vid.play();
-	btn.innerHTML = "";	
-	}
-else {
-	vid.pause();
-	btn.innerHTML = "";
-	}
-}
-	</script>
-
-	</head>
-
-	<body>
-	<header>
-	
-
-	<div class="menu_bar">
-		<a href="#" class="bt-menu"><samp class="icon-menu"></samp>Menu</a>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
+<link href="\Imagenes\index.png" type="imagen/x-icon" rel="shortcut icon"/>
+<title>Ing. Jaime Martinez</title>
+<link rel="stylesheet" type="text/css" href="Css\index.css">	
+</head>
+<body>
+<div class="preload">
+		<div class="logo"> <img src="Imagenes/index.png"  width="200" height="200"></div>
+		<div class="loader-frame">
+		<div class="loader1" id="loader1"></div>
+		<div class="loader2" id="loader2"></div>
+		<div class="loader3" id="loader3"></div>
 	</div>
-		<nav> 
-			<ul>
-					<li><a href="#"><samp class="icon-enter"></samp>Casa</a></li>
-					  <li><a href="#"><samp class="icon-paint-format"></samp>Colores</a></li>
-					   <li><a href="#"><samp class="icon-arrow-left"></samp>Volver</a></li>
-					    <li><a href="#"><samp class="icon-arrow-right"></samp>Regresar</a></li>
-					     <li><a href="#"><samp class="icon-paint-format"></samp>Pintar</a></li>		
-
-				
-			</ul>
-		</nav>
-			
-	</header>
-
-
-<div class="todo">
-   
-				<h1> Aprende las Vocales</h1>
-				
-				<input type="checkbox" id="sonido">
-				<label for="sonido"><img  onclick="playpause(this,'my_video')" src ="imagenes/sonido1.png" alt="" with ="50" height="50"></label>
-
-				<div class="parametros"><h2 class="titulo">Toca las vocales</h2>
-					<div class="vocales">	
-						<button class="Aa"  title="toca el boton">a</button>	
-						<button class="Ee"  title="toca el boton">e</button>
-						<button class="Ii"	title="toca el boton">i</button>
-						<button class="Oo"	title="toca el boton">o</button>
-						<button class="Uu"	title="toca el boton">u</button>
-						<audio src="musicas/a.mp3" class="boton" preload></audio>
-						<audio src="musicas/e.mp3" class="boton" preload></audio>
-						<audio src="musicas/i.mp3" class="boton" preload></audio>
-						<audio src="musicas/o.mp3" class="boton" preload></audio>
-						<audio src="musicas/u.mp3" class="boton" preload></audio>
-						<audio src="musicas/repite.mp3" class="boton"></audio>
-						<audio src="musicas/aeiou.mp3" id="my_video" ></audio>	 		
-					</div>
-				</div>
-							   	
 </div>
-	</body>
 
+<audio src="Musicas\JMdesign.mp3" autoplay="true"></audio>
+<script type="text/javascript" src="Js/index.js"></script>
+</body>
 </html>

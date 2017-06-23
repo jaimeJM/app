@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
+		<title>Aprende con Jaimito </title>
+		<link href="..\Imagenes\logo.png" type="imagen/x-icon" rel="shortcut icon"/>
+	
+		<link rel="stylesheet" type="text/css" href="..\Css\vocales.css"/>
+		<link rel="stylesheet" type="text/css" href="..\Css\style.css"/>
+		<script src="..\Js\jquery-3.2.1.js"></script>
+		<script src ="..\Js\vocales.js"> </script> 
+	
+		
+
+		
+		<script>
+					function playpause(btn,vid){
+					 vid = document.getElementById(vid);
+							if (vid.paused) {
+								vid.play();
+								btn.innerHTML = "";	
+								}
+							else {
+								vid.pause();
+								btn.innerHTML = "";
+								}
+							}
+		</script>
+
+	</head>
+
+	<body>
+		
+	<header>
+			<div class="menu_bar">
+					<a href="#" class="bt-menu"><span class="icon-menu"></span>Menu</a>
+					</div>
+						<nav class="menu"> 
+							<ul>
+								<li><a href="principal.html"><span class="icon-home3"></span>Casa</a></li>
+					  			<li class="submenu"><a href="numeros.html"><span class="icon-sort-numeric-asc"></span>Numeros</a></li>
+					  			<!--<ul class="children">
+					  				<li><a href="#">Item 1<span class="icon-happy"></span></a></li>
+					  				<li><a href="#">Item 2<span class="icon-happy"></span></a></li>
+					  				<li><a href="#">Item 3<span class="icon-happy"></span></a></li>	
+					  			</ul> -->
+					    		<li><a href="Colores.html"><span class="icon-price-tags"></span>Colores</a></li>
+					     		<li><a href="Figuras.html"><span class="icon-stop2"></span>Figuras</a></li>
+					     	</ul>
+						</nav>
+	</header>
+	<div class="todo">
+   				<h1> Aprende las Vocales</h1>
+				<div class="contenedor">
+				<input type="checkbox" id="toggle">
+				<label for="toggle" class="icon-volume-high" id="boton" onclick="playpause(this,'my_video')" ></label>
+				</div>
+				<div class="parametros">
+					<div class="vocales">	
+						<button class="Aa"  title="toca el boton">a</button>	
+						<button class="Ee"  title="toca el boton">e</button>
+						<button class="Ii"	title="toca el boton">i</button>
+						<button class="Oo"	title="toca el boton">o</button>
+						<button class="Uu"	title="toca el boton">u</button>
+						<audio src="..\Musicas/a.mp3" class="boton" preload></audio>
+						<audio src="..\Musicas/e.mp3" class="boton" preload></audio>
+						<audio src="..\Musicas/i.mp3" class="boton" preload></audio>
+						<audio src="..\Musicas/o.mp3" class="boton" preload></audio>
+						<audio src="..\Musicas/u.mp3" class="boton" preload></audio>
+						<audio src="..\Musicas/repite.mp3" class="boton"></audio>
+						<audio src="..\Musicas/aeiou.mp3" id="my_video" ></audio>	 		
+					</div>
+				</div>						   	
+	</div>
+	
+	</body>
+
+</html>

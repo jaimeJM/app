@@ -1,125 +1,214 @@
+@font-face {
+
+font-family:chalkdust;
+
+src: url(../Letras/chalkdust.ttf);
+
+}
+
 *{
 	margin: 0px;
 	padding: 0px;
 	box-sizing: border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
   	}
-
 body {
 
 	width: 100%;
 	height: auto;
 	margin: 0; 
 	font-family: sans-serif;
-	background: url("imagenes/fondo.png");
+	background: url("../Imagenes/fondo.png");
 	background-size: 100% 100%;
     background-repeat: no-repeat;
 	}
 
+
 .todo{
-	width: 90%;
+	width: 100%;
 	max-width: 1000px;
 	margin:0 auto;
 	overflow: hidden;
 	}
 
+#toggle{
+	display: none;
+}
 
+#boton{
+	cursor: pointer;
+	display: block;
+	height:	50px;
+	width: 50px;
+	background: #FFFFFF;
+	text-align: center;
+	line-height: 50px;
+	font-size: 30px;
+	border-radius: 50%;
+	box-shadow: 0 5px 12px rgba(0,0,0,0.7);
+	color: #777;
+}
+
+#toggle:checked + #boton{
+	background: #eee;
+	box-shadow: inset 0 3px 12px rgba(0,0,0,0.5);
+	color: rgba(0,255,0,0.6);
+}
 header {
-
 	width: 100%;
+	background: #024959;
+	display: flex;
+	justify-content: center;
 
 }
 
-header nav {
 
-	width: 95%;
-	z-index: 1000:
+header nav {	
+	
+	z-index: 1000;
 	max-width: 1000px;
-	margin: 0 auto;
+	background: #024959;
+	margin:0;
+	
+	
+	
+}
+.menu_bar {
+	display: none;
+
+}
+
+
+}
+header nav ul {	
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	
+
+}
+header nav ul li {
+		display: inline-block;
+		position: relative;	
+			
+}
+
+header nav ul li a {
+	color: #FFFFFF;
+	display:block; 
+	text-decoration: none;
+	padding: 20px;	
+
+}
+header nav ul li span {
+	margin-right: 10px;
+}
+header nav ul li:hover {
+	
+	background: rgba(255,255,255, 0.3);
+
+}
+/*
+header nav ul li:hover .children{
+	
+	display: block;
+
+}
+
+header nav ul li .children {
+	
+	display: none;
+	background: #024959;
+	position:absolute;
+	width: 150%;
+	z-index: 1000;
+
+}
+
+header nav ul li .children li{
+
+		display: block;
+		overflow:	hidden;
+		border-top: 1px solid rgba(255,255,255, .3);
+
+}
+
+header nav ul li .children li a{
+
+	display: block;
+}
+
+header nav ul li .children li a span{
+		
+		float: right;
+		position: relative;
+		margin-right: 0px;
+		margin-left: 10px;
+
+}
+
+
+header nav ul li .caret {
+
+	position: relative;
+	top: 3px;
+	margin-left: 10px;
+
+}
+*/
+
+
+
+@media screen and (max-width: 800px){
+
+
+body{
+
+	margin-top: 80px;
+}
+
+
+.menu_bar {
+	
+	display: block;
+	width: 100%;
+	background: #ccc;
+	position: fixed;
+	top: 0px;
+	transition: 1s;
+}
+
+.menu_bar .bt-menu {
+
+	display: block;
+	padding: 20px;
+	color: #FFFFFF;	
+	overflow: hidden;
+	font-size: 25px;
+	font-weight: bold;
+	text-decoration:none;
 	background: #024959;
 }
 
-.menu_bar {
 
-	display: none;
-}
-
-#sonido{
-	color: #FFFFFF;
-	text-decoration: none;
-	display: none;
-	font-size: 1em;
-
-}
-
-
-
-.logo .loco {
-
-	
-	padding: 20px;
-	color: #FFFFFF;
-	
-	text-decoration:none;
-	font-weight: bold;
-	font-size: 25px;
-	-webkit-box-sizing:border-box;
-	box-sizing: border-box;
-}
-
-
-.logo span {
-	
+.menu_bar span {
+	float: right;
 	font-size: 40px;
 
 
 }
 
 
-
-header nav ul {
-
-	overflow:hidden;
-	list-style: none;
-
-}
-
-header nav ul li {
-
-		display: inline-block;
-		position: relative;
-
-
-}
-
-header nav ul li a {
-
-	color: #FFFFFF;
-	padding: 20px;
-	display:block; 
-	text-decoration: none;
-
-}
-header nav ul li samp {
-
-	margin-right: 10px;
-}
-
-header nav ul li:hover {
-	
-	background: rgba(255,255,255, 0.3);
-
-}
-
-@media screen and (max-width: 800px){
-
-
 	header nav {
 
+		height: calc(100%-80);
 		width: 80%;
-		height: cal(100% -80%);
-		left: -100%;
-		margin: 0px;
 		position: fixed;
+		right: 100%;
+		margin: 0px;
+		
 		overflow: scroll;
 	}
 	header nav ul li {
@@ -129,37 +218,35 @@ header nav ul li:hover {
 
 	}
 
- 
+	header nav ul li a{
 
-.menu_bar {
+		display: block;
+	}
 
-	display: block;
-	width: 100%;
-	background: #ccc;
+	header nav ul li:hover .children{
 
-}
+		display: none;
+	}
 
-.menu_bar .bt-menu {
+	header nav ul li .children{
 
-	display: block;
-	padding: 20px;
-	background: #024959;
-	color: #FFFFFF;
-	overflow: hidden;
-	text-decoration:none;
-	font-weight: bold;
-	font-size: 25px;
-	-webkit-box-sizing:border-box;
-	box-sizing: border-box;
-}
+		width: 100%;
+		position: relative;
+		display: none;
+	}
+
+	header nav ul li .children li a{
+
+		margin-left: 20px;
+	} 
 
 
-.menu_bar samp {
-	float: right;
-	font-size: 40px;
+	header nav ul li .caret {
+
+		float: right;
+	}
 
 
-}
 }
 
 
@@ -190,13 +277,19 @@ header nav ul li:hover {
 
 
 h1 {
-
+	
 	margin: 3%;
-	color: #000000;
+	color: #FFFFFF;
 	text-align: center;
-	text-shadow: 3px 3px 3px #FFFFFF;
-	font-family:  150% sans-serif;
+	text-shadow: 3px 3px 3px #000000;
+	font-family:  chalkdust;
 	}
+
+	h2 {
+
+		
+	}
+
 
 .button {
 	
@@ -222,57 +315,20 @@ h1 {
 				
   }
 
-/*.parametros {
-	width:400px;
-	margin-top: -1280px;
-	margin-bottom: 100px;
-	margin-left: 500px;
-	background: -webkit-linear-gradient(top, #38594B, #38594B); 
-	border: 5px solid #F4AE4B;	
-	border-radius: 5px;
-	box-shadow: 3px 3px 3px #000000;}*/
+
 
 .parametros {
 	width: 90%;
 	height: 1300px;
 	margin: 0 auto;
-	background: -webkit-linear-gradient(top, #38594B, #38594B); /* gris*/
+	background: url("../Imagenes/pizarra.png");
+	background-size: 100% 100%;
+    background-repeat: no-repeat;
 	border: 5px solid #F4AE4B;	
 	border-radius: 5px;
 	box-shadow: 3px 3px 3px #000000;	
 	}
 
-/*.formulario{
-
-			width: 950px;
-			max-width: 100%;
-			margin: auto;
-			margin-top: 50px;
-			padding: 20px;
-			box-shadow: 0 0 20px 1px rgba(0,0,0,0.3);}*/
-
-h2 {
-	color: #FFFFFF;
-	margin: 30px;
-	text-align: center;
-	text-shadow: 3px 3px 3px #000000;
-	}
-
-img.icon{
-
-	display: block;
-	margin: 10px auto;
-	background-color: rgba(255,255,255,.1);
-	width: 10px;
-	padding-bottom: 10px;
-	-webkit-border-radius: 50%;
-	-webkit-box-shadow:0px 0px 0px 50px rgba(255,255,255,0);
-	-webkit-transition:box-shadow .4s;
-	}
-
-li.contenedor:hover img.icon{
-
-	-webkit-box-shadow:0px 0px 0px 0px rgba(255,255,255,.6);}
 
 .vocales {
 
@@ -394,55 +450,4 @@ li.contenedor:hover img.icon{
 							    } 
 
 
-
-@font-face {
-  font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?7ttcj9');
-  src:  url('fonts/icomoon.eot?7ttcj9#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?7ttcj9') format('truetype'),
-    url('fonts/icomoon.woff?7ttcj9') format('woff'),
-    url('fonts/icomoon.svg?7ttcj9#icomoon') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-[class^="icon-"], [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.icon-paint-format:before {
-  content: "\e90c";
-}
-.icon-menu:before {
-  content: "\e9bd";
-}
-.icon-spell-check:before {
-  content: "\ea12";
-}
-.icon-enter:before {
-  content: "\ea13";
-}
-.icon-volume-high:before {
-  content: "\ea26";
-}
-.icon-volume-mute2:before {
-  content: "\ea2a";
-}
-.icon-arrow-right:before {
-  content: "\ea34";
-}
-.icon-arrow-left:before {
-  content: "\ea38";
-}
 

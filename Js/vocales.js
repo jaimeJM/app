@@ -2,10 +2,20 @@ $(document).on('ready',function(){
 	
 
 
+$(".menu_bar").on("click", function(){
+
+
+ $(".icon-menu").toggleClass("icon-cross");
+
+});
+
+
+
+
+
+
+
 $(document).ready(main);
-
-
-
 
 
 var contador = 1 ;
@@ -31,29 +41,14 @@ function main() {
  															
 							 								left: '-100%'
  														},1000);
- 						}
-
+ 												}
 									});
 				};
 
-
-
-
-				$(".main-nav").on("click",function(){
-				$(".main-nav").toggleClass("mostrar");
-				});	
-
-				$(".menu-audio").on("click",function(){
-				$(".menu-audio").toggleClass("play");
+			$('.submenu').click(function(){
+			$(this).children('.children').slideToggle();
+			});
 				
-
-				});
-
-
-
-				
-
-			
               
 			
 			$(".titulo").mouseenter(function(){
@@ -95,9 +90,6 @@ function main() {
 
 			});
 
-				
-
-
 			$(".Oo").on("click",function(){
 
 				$("audio")[3].play();
@@ -107,9 +99,6 @@ function main() {
 				});
 
 			});
-
-				
-
 
 			$(".Uu").on("click",function(){
 
